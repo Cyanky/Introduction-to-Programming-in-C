@@ -37,9 +37,9 @@ void squares(int size1, int x_offset, int y_offset, int size2) {
 
     for(int x = 0; x < w; x++) {//count from 0 to w. Call the number you count with x
       int a = isInRange(x, x_offset, size2);
-      int b = isAtBorder(y, y_offset, size2 - 1);
+      int b = isAtBorder(y, y_offset, size2);
       int c = isInRange(y, y_offset, size2);
-      int d = isAtBorder(x, x_offset, size2 - 1);
+      int d = isAtBorder(x, x_offset, size2);
       if ((a == 1 && b == 1)||(c == 1 && d == 1)) {
 	printf("*");//check if  EITHER
       }
@@ -61,12 +61,11 @@ void squares(int size1, int x_offset, int y_offset, int size2) {
 
       else {
 	printf(" ");
-      } 
+      }
     }
-    printf("\n");
   }
 
-  //else print a space
+  printf("\n");  //else print a space
     //when you finish counting x from 0 to w, 
     //print a newline
 
