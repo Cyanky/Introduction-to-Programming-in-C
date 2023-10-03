@@ -38,10 +38,12 @@ rectangle intersection(rectangle r1, rectangle r2) {
   r1 = canonicalize(r1);
   r2 = canonicalize(r2);
 
-  if((r2.x + r2.width) <= r1.x || (r2.y + r2.height) <= r1.y||(r1.x + r1.width) <= r2.x || (r1.y + r1.height) <= r2.y) {
+  if((r2.x + r2.width) < r1.x || (r2.y + r2.height) < r1.y||(r1.x + r1.width) < r2.x || (r1.y + r1.height) < r2.y) {
     r1.x = max(r1.x, r2.x);
     r1.y = max(r1.y, r2.y);
     r1.width = 0;
+    r1.height = 0;
+    r1 = canonicalize(r1);
   }
   else {
     int a = max(r1.x, r2.x);
@@ -50,6 +52,7 @@ rectangle intersection(rectangle r1, rectangle r2) {
     r1.height = min(r1.y + r1.height, r2.y + r2.height) - b;
     r1.x = a;
     r1.y = b;
+    r1 = canonicalize(r1);
   }
   return r1;
 }
