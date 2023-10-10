@@ -73,10 +73,10 @@ card_t card_from_letters(char value_let, char suit_let) {
     }		     
   }
   switch(suit_let) {
-  case SPADES: temp.suit = SPADES; break;
-  case HEARTS: temp.suit = HEARTS; break;
-  case DIAMONDS: temp.suit = DIAMONDS; break;
-  case CLUBS: temp.suit = CLUBS; break;
+  case 's': temp.suit = SPADES; break;
+  case 'h': temp.suit = HEARTS; break;
+  case 'd': temp.suit = DIAMONDS; break;
+  case 'c': temp.suit = CLUBS; break;
   default: temp.suit = 'x';
   }
   assert_card_valid(temp);
