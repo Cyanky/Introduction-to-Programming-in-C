@@ -77,7 +77,7 @@ card_t card_from_letters(char value_let, char suit_let) {
   case HEARTS: temp.suit = HEARTS; break;
   case DIAMONDS: temp.suit = DIAMONDS; break;
   case CLUBS: temp.suit = CLUBS; break;
-  default: temp.suit = 'n';
+  default: temp.suit = 'x';
   }
   assert_card_valid(temp);
   return temp;
