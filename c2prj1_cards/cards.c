@@ -85,7 +85,7 @@ card_t card_from_letters(char value_let, char suit_let) {
 
 card_t card_from_num(unsigned c) {
   card_t temp;
-  int cTemp = c % 13
+  int cTemp = c % 13;
   if(2 <= cTemp) {
     temp.value = cTemp; 
   }
