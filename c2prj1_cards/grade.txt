@@ -1,65 +1,12 @@
-Grading at Tue 10 Oct 2023 09:18:29 AM UTC
+Grading at Tue 10 Oct 2023 09:23:31 AM UTC
 Compiling cards.c
-Testing card_from_letters
-Passed
-Testing value_letter and suit_letter
-Passed
-Testing print_card
-Passed
-Testing card_from_num
-When I use card_from_num on numbers 0<= i < 52
-I expect to see each card exactly once, but I see:
-Ks
-As
-2s
-3s
-4s
-5s
-6s
-7s
-8s
-9s
-0s
-Js
-Qs
-?h
-?h
-2h
-3h
-4h
-5h
-6h
-7h
-8h
-9h
-0h
-Jh
-Qh
-?d
-?d
-2d
-3d
-4d
-5d
-6d
-7d
-8d
-9d
-0d
-Jd
-Qd
-?c
-?c
-2c
-3c
-4c
-5c
-6c
-7c
-8c
-9c
-0c
-Jc
-Qc
+cards.c: In function ‘card_from_num’:
+cards.c:89:3: error: expected ‘,’ or ‘;’ before ‘if’
+   89 |   if(2 <= cTemp) {
+      |   ^~
+cards.c:92:3: error: ‘else’ without a previous ‘if’
+   92 |   else {
+      |   ^~~~
+Could not compile your card.c!
 
 Overall Grade: FAILED
